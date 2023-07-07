@@ -1,12 +1,28 @@
-# TypeScript introducción para Nest
+# Instalaciones recomendadas - Nest.js
 
-Este proyecto es el respaldo de la introducción a TypeScript.
+<p align="center">
+  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
+</p>
 
-## No olvidar ejecutar
+````
+
+- [Node](https://nodejs.org/es/)
+
+```opcional - Yarn
+npm install --global yarn
+````
+
+- [Nest](https://docs.nestjs.com/)
+
+```instalar Nest CLI
+npm i -g @nestjs/cli
+```
+
+- [Docker Desktop](https://www.docker.com/get-started)
+
+Descargar imagen de Mongo 5.0.0 y postgres 14
 
 ```
-yarn install
-yarn dev
+docker pull mongo:5.0.0
+docker pull postgres:14.3
 ```
-
-Para instalar y ejecutar el proyecto.
