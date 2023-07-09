@@ -61,7 +61,7 @@ export class BrandsService {
   }
 
   remove(id: string) {
-    const brandDb = this.findOne(id);
+    const brand = this.findOne(id);
     this.brands = this.brands.filter(brand => brand.id !== id)
   }
 }
