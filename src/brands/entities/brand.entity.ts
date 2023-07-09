@@ -1,1 +1,8 @@
-export class Brand {}
+// Tabla de la DB
+export class Brand {
+  id: string;
+  name: string;
+
+  createdAt: number;
+  updatedAt?: number;
+}
