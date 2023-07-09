@@ -57,7 +57,7 @@ export class BrandsService {
       return brand;
     });
 
-    // return brandDb;
+    return brandDb;
   }
 
   remove(id: string) {
