@@ -9,9 +9,10 @@ import {
   Post,
 } from '@nestjs/common';
 import { CarsService } from './cars.service';
-import { CreateCarDto } from './dto/create-car.dto';
+import { CreateCarDto, UpdateCarDto } from './dto/index';
 
 // Los controladores escuchan peticiones del cliente y emitir una respuesta
+
 @Controller('cars') // http://localhost:3000/cars
 export class CarsController {
   // Inyeccion de dependencia
@@ -29,19 +30,19 @@ export class CarsController {
 
   @Post() // http://localhost:3000/cars/
   createCar(@Body() createCarDto: CreateCarDto) {
-    return createCarDto;
+    return this.carsService.create(createCarDto);
   }
 
-  @Patch() // http://localhost:3000/cars/:id
-  updateCar(@Param('id', ParseUUIDPipe) id: string, @Body() body: any) {
-    return body;
+  @Patch(':id') // http://localhost:3000/cars/:id
+  updateCar(
+    @Param('id', ParseUUIDPipe) id: string,
+    @Body() updateCarDto: UpdateCarDto,
+  ) {
+    return this.carsService.update(id, updateCarDto);
   }
 
-  @Delete() // http://localhost:3000/cars/:id
+  @Delete(':id') // http://localhost:3000/cars/:id
   deleteCar(@Param('id', ParseUUIDPipe) id: string) {
-    return {
-      method: 'delete',
-      id,
-    };
+    return this.carsService.delete(id);
   }
 }
