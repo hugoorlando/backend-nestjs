@@ -1,13 +1,14 @@
 import { IsInt, IsPositive, IsString, Min, MinLength } from 'class-validator';
 
-// Data que voy a transferir
 export class CreatePokemonDto {
-  @IsString()
-  @MinLength(1)
-  name: string;
-
+  // isInt, isPositive, min 1
   @IsInt()
   @IsPositive()
   @Min(1)
-  poke_num: number;
+  no: number;
+
+  // isString, Minlenth 1
+  @IsString()
+  @MinLength(1)
+  name: string;
 }
