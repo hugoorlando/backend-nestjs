@@ -40,7 +40,7 @@ docker pull postgres:14.3
 
 ### Tema que estoy usando en VSCode:
 
-- [Tokyo Night](https://marketplace.visualstudio.com/items?itemName=enkia.tokyo-night)
+- [Nebula Theme]([https://marketplace.visualstudio.com/items?itemName=enkia.tokyo-night](https://marketplace.visualstudio.com/items?itemName=ChirtleLovesDolls.nebula-theme))
 
 - [Iconos](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
 
