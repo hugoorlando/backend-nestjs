@@ -15,7 +15,7 @@ services:
 
   pgadmin4:
     image: dpage/pgadmin4:7.4
-    container_name: pgadmin4
+    container_name: pgadmin4-postgres
     ports:
       - '8080:80'
     environment:
