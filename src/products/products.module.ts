@@ -10,5 +10,6 @@ import { Product, ProductImage } from './entities/index';
   providers: [ProductsService],
   // Asociar nuestra entity con el TypeORM de Postgres
   imports: [TypeOrmModule.forFeature([Product, ProductImage])],
+  exports: [ProductsService],
 })
 export class ProductsModule {}
