@@ -3,8 +3,10 @@ import {
   BeforeUpdate,
   Column,
   Entity,
+  OneToMany,
   PrimaryGeneratedColumn,
 } from 'typeorm';
+import { ProductImage } from './index';
 
 // Esta entity es una representación de este Objeto en la base de datos
 // Básicamente un entity sería una Tabla
@@ -53,6 +55,14 @@ export class Product {
     default: [],
   })
   tags: string[];
+
+  // Un producto puede tener muchas imagenes
+  // Relacion One to many
+  @OneToMany(() => ProductImage, (productImage) => productImage.product, {
+    cascade: true,
+    eager: true,
+  })
+  images?: ProductImage[];
 
   @BeforeInsert()
   checkSlugInsert() {
