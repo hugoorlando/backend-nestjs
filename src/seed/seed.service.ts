@@ -22,7 +22,7 @@ export class SeedService {
     products.forEach((product) => {
       insertPromises.push(this.productsService.create(product));
     });
-
+    // espera que toda las promesas se resuelvan
     await Promise.all(insertPromises);
 
     return true;

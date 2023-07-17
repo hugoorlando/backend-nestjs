@@ -10,7 +10,7 @@ import { ProductImage } from './index';
 
 // Esta entity es una representación de este Objeto en la base de datos
 // Básicamente un entity sería una Tabla
-@Entity()
+@Entity({ name: 'products' })
 export class Product {
   @PrimaryGeneratedColumn('uuid')
   id: string;
